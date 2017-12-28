@@ -27,6 +27,16 @@
         <beans:property name="prefix" value="/WEB-INF/pages/"/>
         <beans:property name="suffix" value=".jsp"/>
     </beans:bean>
+    
+ 
+	<bean id="constructorBean" class="com.springapp.constructorWay.Restaurant" scope="singleton">
+		<constructor-arg ref="coffeeBean" />
+		<!-- We need to change the ref here to inject the diferrent class like Tea or coffee -->
+	</bean>
+
+	<bean id="teaBean" class="com.springapp.constructorWay.Tea" ></bean>
+
+	<bean id="coffeeBean" class="com.springapp.constructorWay.Coffee"></bean>
 
     <context:component-scan base-package="com.springapp"/>
 
