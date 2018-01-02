@@ -31,7 +31,7 @@ public class UserController {
         User user = new User();
         user.setFirstName("Turgay");
         user.setLastName("Can");
-        this.teaBean.PrepareDrink();
+        this.teaBean.PrepareDrink(); // this will use autowiring 
         return user;
     }
 
